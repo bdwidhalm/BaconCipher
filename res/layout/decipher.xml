@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+    
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:text="Enter the coded message below: " />
+    <EditText
+        android:id="@+id/orgMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:ems="10"
+        android:hint="Enter the coded message"
+        android:inputType="textMultiLine"
+        android:maxLines="3"
+        android:maxLength="1500"
+        android:singleLine="false" />
+    
+    <Button
+        android:id="@+id/decryptButton"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="5dp"
+        android:text="Decrypt"
+        android:textSize="20sp"
+        android:onClick="decrypt" />
+    
+    <TextView
+        android:id="@+id/baconMessage"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:gravity="center" />
+    <com.google.ads.AdView android:id="@+id/adViewDeCipher"
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+                                   ads:adUnitId="ca-app-pub-7773256712936597/1919526620"
+                                   ads:adSize="BANNER"/>
+</LinearLayout>
+

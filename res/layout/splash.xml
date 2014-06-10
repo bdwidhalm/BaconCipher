@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+    android:id="@+id/mainLayout"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+    
+    <ImageView
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:adjustViewBounds="true"
+    android:src="@drawable/splash_image" />
+    
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center" >
+    
+        <Button
+            android:id="@+id/encryptButton"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="5dp"
+            android:text="Create Hidden Message"
+            android:textSize="15sp"
+            android:onClick="encrypt" />
+        
+        <Button
+            android:id="@+id/encryptButton"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="5dp"
+            android:text="Unlock Hidden Message"
+            android:textSize="15sp"
+            android:onClick="decrypt" />
+        
+    </LinearLayout>
+    <TextView
+        android:textStyle="bold"
+        android:textSize="12sp"
+        android:gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="A Bacon's Cipher is a form of steganography, which is a method of hiding a secret message in plain text rather than encrypting the message in un-readable text.  It's named after Francis Bacon." />
+    <com.google.ads.AdView android:id="@+id/adViewSplash"
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+                                   ads:adUnitId="ca-app-pub-7773256712936597/9920471426"
+                                   ads:adSize="BANNER"/>
+</LinearLayout>

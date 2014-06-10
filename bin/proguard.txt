@@ -1,0 +1,31 @@
+# view AndroidManifest.xml #generated:38
+-keep class com.google.ads.AdActivity { <init>(...); }
+
+# view res/layout/decipher.xml #generated:46
+# view res/layout/main.xml #generated:116
+# view res/layout/splash.xml #generated:49
+-keep class com.google.ads.AdView { <init>(...); }
+
+# view AndroidManifest.xml #generated:29
+-keep class com.woodystech.baconcipher.BaconCipher { <init>(...); }
+
+# view AndroidManifest.xml #generated:33
+-keep class com.woodystech.baconcipher.DeCipher { <init>(...); }
+
+# view AndroidManifest.xml #generated:21
+-keep class com.woodystech.baconcipher.Splash { <init>(...); }
+
+# onClick res/layout/decipher.xml #generated:29
+# onClick res/layout/splash.xml #generated:31
+-keepclassmembers class * { *** decrypt(...); }
+
+# onClick res/layout/main.xml #generated:70
+# onClick res/layout/splash.xml #generated:21
+-keepclassmembers class * { *** encrypt(...); }
+
+# onClick res/layout/main.xml #generated:79
+-keepclassmembers class * { *** shakes(...); }
+
+# onClick res/layout/main.xml #generated:98
+-keepclassmembers class * { *** share(...); }
+

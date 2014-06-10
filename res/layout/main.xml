@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+    
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:text="Enter a secret message below: " />
+    <EditText
+        android:id="@+id/orgMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:ems="10"
+        android:hint="Enter your secret message (up to 140 characters)"
+        android:inputType="textMultiLine"
+        android:maxLines="3"
+        android:maxLength="140"
+        android:singleLine="false" />
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:text="Enter a message to hide your secret message inside: " />
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="italic"
+        android:textSize="10sp"
+        android:gravity="center"
+        android:text="(If you can't think of something to use, you can click the Shakespeare Quote button to fill in the message with a Shakespeare quote)" />
+    <EditText
+        android:id="@+id/cloakMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:ems="10"
+        android:hint="Enter a message to hide your secret message within"
+        android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ" 
+        android:inputType="textMultiLine"
+        android:maxLines="3"
+        android:singleLine="false" />
+    <TextView
+        android:id="@+id/tvCount"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="10sp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:text="0/0" />
+    
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center" >
+    
+        <Button
+            android:id="@+id/encryptButton"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="2dp"
+            android:text="Encrypt"
+            android:textSize="20sp"
+            android:onClick="encrypt" />
+        <Button
+            android:id="@+id/shakesButton"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="2dp"
+            android:text="Shakespeare\nQuote"
+            android:textSize="12sp"
+            android:onClick="shakes" />
+    </LinearLayout>
+    
+    <TextView
+        android:id="@+id/baconMessage"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        android:gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    
+    <Button
+        android:id="@+id/shareButton"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="2dp"
+        android:text="Share"
+        android:textSize="20sp"
+        android:onClick="share" />
+    <TextView
+        android:id="@+id/shareText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:visibility="invisible"
+        android:text="Click to share this secret message with others!" />
+    <com.google.ads.AdView android:id="@+id/adViewMain"
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+                                   ads:adUnitId="ca-app-pub-7773256712936597/9442793427"
+                                   ads:adSize="BANNER"/>
+</LinearLayout>
+
