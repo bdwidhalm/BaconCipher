@@ -1,0 +1,7 @@
+# Intellij / MacOS
+.idea/
+**/.DS_Store
+
+bin/*
+
+BaconCipher.iml
